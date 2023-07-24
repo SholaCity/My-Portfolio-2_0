@@ -1,0 +1,89 @@
+.web__header {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  height: 70vh;
+  background-color: rgb(24, 24, 24);
+  text-align: center;
+  margin-top: 70px;
+}
+
+.web__header.p__text {
+  font-size: 30px;
+  height: fit-content;
+  margin-inline: auto;
+}
+.web__header h1 {
+  font-size: 80px;
+  margin: 0.2rem auto;
+}
+
+.web__header-abouttext {
+  font-size: 20px;
+  width: min(700px, 90%);
+  margin-inline: auto;
+  color: var(--color-text);
+  margin: 0.3rem 0 0;
+}
+.web__header-btn {
+  display: flex;
+  gap: 15px;
+  margin: 20px;
+}
+.web__header-btn .cta__button {
+  width: 170px;
+}
+.web__header-btn .cta__button:nth-child(2) {
+  background: transparent;
+  color: var(--bg-cta);
+}
+
+@media screen and (max-width: 1000px) {
+  .web__header h1 {
+    font-size: 60px;
+    margin: 0.2rem auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .web__header {
+    height: min(400px, 60vh);
+    gap: 5px;
+  }
+  .web__header.p__text {
+    font-size: 25px;
+  }
+  .web__header h1 {
+    font-size: 40px;
+    margin: 0.2rem auto;
+  }
+
+  .web__header-abouttext {
+    font-size: 18px;
+  }
+  .web__header-btn {
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 400px) {
+  .web__header.p__text {
+    font-size: 20px;
+  }
+  .web__header h1 {
+    font-size: 33px;
+  }
+
+  .web__header-abouttext {
+    font-size: 16px;
+  }
+  .web__header-btn {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .web__header-btn .cta__button {
+    width: 125px;
+    font-size: 15px;
+  }
+}

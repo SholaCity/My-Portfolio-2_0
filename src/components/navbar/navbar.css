@@ -1,0 +1,316 @@
+.web__navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999;
+  background: linear-gradient(180deg, rgb(51, 51, 51), var(--color-bg));
+  backdrop-filter: blur(5px);
+}
+
+.web__navbar-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 20px;
+  height: 100%;
+}
+
+.web__navbar-wrap_logo {
+  margin-right: 2rem;
+  width: fit-content;
+  position: relative;
+  z-index: 99999999;
+}
+
+.web__navbar-wrap_container {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  align-items: center;
+}
+
+.web__navbar-wrap_container-links,
+.web__navbar-wrap_container-sign {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+
+.web__navbar-btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.web__navbar-menu_container-wrap {
+  display: none;
+}
+
+.web__navbar-wrap_container p {
+  color: var(--color-text);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 25px;
+  text-transform: capitalize;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.web__navbar-wrap_container p:hover {
+  color: var(--bg-cta);
+}
+
+.web__navbar-menu_icon {
+  display: none;
+}
+
+.bg-icon {
+  display: none;
+  mask-position: 0%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 1rem;
+  bottom: 1rem;
+  right: 1rem;
+  left: 1rem;
+  margin: auto;
+  background: var(--color-bg);
+}
+
+.github {
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 15px;
+
+  color: rgb(207, 207, 207);
+  border-radius: 5px;
+  position: absolute;
+  top: 80px;
+  right: 0rem;
+  background: linear-gradient(45deg, rgb(49, 49, 49), var(--color-bg));
+}
+.github hr {
+  width: 100%;
+  height: 1px;
+  background: #ff2e2e;
+}
+
+.github__profile {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.github__profile .name {
+  font-size: 0.8rem;
+}
+.github__profile .job {
+  font-size: 0.9rem;
+}
+.image {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  background: url("../../assets/profile-git.jpg");
+  background-size: cover;
+  cursor: pointer;
+}
+.image .online {
+  position: absolute;
+  background: rgb(85, 252, 85);
+  width: 11px;
+  height: 11px;
+  border-radius: 100%;
+  bottom: 5px;
+  right: 0px;
+  box-shadow: 0 0 10px rgb(54, 78, 60);
+}
+
+.github__info {
+  display: flex;
+  flex-flow: column;
+  row-gap: 15px;
+}
+.github__profile .profile {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.github__info a {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.github__info a .icon {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.github__info a:nth-child(n + 2) .icon {
+  color: #16bbfc;
+}
+.github__info a:nth-child(1) .icon {
+  color: transparent;
+  fill: none;
+}
+.github__info a:nth-child(1) .icon path {
+  fill: #16bbfc;
+}
+.react-nav {
+  margin: auto;
+}
+@media screen and (max-width: 850px) {
+  .web__navbar-menu_container-wrap {
+    display: block;
+  }
+
+  .web__navbar-menu_icon {
+    position: relative;
+    display: block;
+    margin-left: 30px;
+    background: var(--color-bg);
+    border-radius: 5px;
+    z-index: 999999999;
+  }
+
+  .web__navbar-menu_container {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 50%;
+    padding: 100px 1rem 1rem;
+    border-radius: 5px;
+    background: rgb(29 29 29);
+    height: 100vh;
+  }
+
+  .web__navbar-menu_container .cta__button {
+    align-self: flex-start;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: fit-content;
+  }
+  .web__navbar-menu_container .cta__button a {
+    height: fit-content;
+    color: inherit;
+    width: fit-content;
+  }
+  .cta__button .download-icon {
+    height: 30px;
+  }
+
+  .web__navbar-menu_container-wrap {
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 15px;
+  }
+
+  .web__navbar-wrap_container-links,
+  .web__navbar-wrap_container-sign {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    row-gap: 15px;
+  }
+
+  .web__navbar-btn {
+    justify-content: center;
+  }
+
+  .web__navbar-menu_container-wrap p {
+    display: flex;
+    color: #fff;
+    text-align: center;
+    font-weight: 600;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .web__navbar-wrap_container,
+  .web__navbar-menu_container-wrap button {
+    display: none;
+  }
+  .github {
+    position: relative;
+    margin-top: 20px;
+    top: auto;
+    right: auto;
+  }
+  .bg-icon {
+    display: block;
+    mask-position: 0%;
+    width: 50%;
+    height: 50%;
+    opacity: 0.3;
+    position: absolute;
+    top: 1rem;
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+    margin: auto;
+    z-index: -1;
+  }
+  .socials {
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .socials .icon {
+    width: 21px;
+    height: 21px;
+    color: rgb(255, 255, 255);
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .web__navbar-btn button {
+    display: none;
+  }
+
+  .web__navbar-menu_container {
+    left: 30%;
+  }
+
+  .web__navbar-menu_container-wrap button {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .web__navbar {
+    height: 60px;
+  }
+  .web__navbar-menu_container {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    border-radius: 0px;
+    padding-left: 1.5rem;
+    z-index: 999;
+  }
+
+  .web__navbar-menu_container-wrap {
+    width: 100%;
+  }
+}

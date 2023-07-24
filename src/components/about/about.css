@@ -1,0 +1,135 @@
+.web__about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  height: fit-content;
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+  padding: 5rem 5rem;
+  position: relative;
+}
+.web__about > * {
+  text-align: left;
+  margin-inline: 0;
+}
+
+.web__about img {
+  width: 300px;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  object-fit: cover;
+  filter: grayscale();
+  -webkit-filter: grayscale();
+}
+
+.web__about:hover img {
+  filter: none;
+  -webkit-filter: none;
+}
+.web__about-text {
+  width: 600px;
+}
+.web__about-text .p__text {
+  text-align: left;
+  font-size: 20px;
+}
+
+.web__about-text h3 {
+  font-size: 50px;
+  margin-block: 0.4rem;
+}
+.web__about-text .text {
+  font-size: 20px;
+  margin-block: 0.4rem;
+  color: var(--color-text);
+}
+
+.web__about-text_socials {
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.web__about-text_socials .icon {
+  width: 40px;
+  height: 40px;
+}
+.web__about-text_socials .icon path {
+  color: var(--color-text);
+}
+.web__about-text_socials .icon:hover path {
+  color: var(--bg-cta);
+}
+
+@media screen and (max-width: 1200px) {
+  .web__about-text .text {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .web__about {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 4.5rem;
+    padding-right: 4.5rem;
+  }
+  .web__about-text h3 {
+    font-size: 40px;
+  }
+  .web__about-text_socials .icon {
+    width: 35px;
+    height: 35px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .web__about-text h3 {
+    font-size: 40px;
+  }
+  .web__about {
+    padding: 2rem 2.5rem;
+  }
+  .web__about img {
+    width: min(75%, 300px);
+    position: relative;
+    top: auto;
+    right: auto;
+    margin: auto;
+    margin-bottom: 0;
+  }
+  .web__about-text .text {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .web__about-text_info {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0;
+    background: none;
+  }
+  .web__about {
+    padding: 3rem 1.5rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .web__about-text_info {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0;
+    background: none;
+  }
+}
+@media screen and (max-width: 410px) {
+  .web__about-text_info {
+    justify-content: flex-start;
+  }
+}
